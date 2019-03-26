@@ -14,19 +14,23 @@ images, either generic landscape/themed images that Google provides or images fr
 of your photo albums on Google photos (I opt for the latter).  You can have the time and weather appear over the bottom
 left of the images.
 
+<img src="src/assets/hub_photo.jpg" width="500px"></img>
+
 One day it occurred to me to wonder if I could get Ambient Mode to cycle through a series of 
-flashcards that would help me learn programming concepts or syntax through repetition.  The main
-obstacle with that idea was that Ambient Mode is strictly limited to displaying photos (you can't
+flashcards that would help me learn programming concepts or syntax through repetition.  
+
+<img src="src/assets/hub_card.jpg" width="500px"></img>
+
+The main obstacle with that idea was that Ambient Mode is strictly limited to displaying photos (you can't
 point it to a series of Google Doc entries, for example), and using a graphics or presentation
 program to create the images with the correct dimensions was time-consuming.
 
 Hubcards was created to overcome that obstacle.  The content for the cards is stored online in 
 Cloud Firestore and is managed through a Vue.js-powered web application that lets you preview the
 card image and choose the color scheme.  When you are ready to generate a card, it converts the 
-browser's DOM display of the card into an image using the [html-to-image](https://www.npmjs.com/package/html-to-image) NPM module and then 
-outputs the image to the downloads folder of your browser using the [downloadjs](https://www.npmjs.com/package/downloadjs) NPM module, 
-and from there you can upload the images to the Google Photos album of your choice.  The 
-web application ensures that the generated image is sized in a way that fits the Hub screen.
+browser's DOM display of the card into an image using the [html-to-image](https://www.npmjs.com/package/html-to-image) NPM module and then outputs the image to the downloads folder of your browser using the [downloadjs](https://www.npmjs.com/package/downloadjs) NPM module, and from there you can upload the images to the Google Photos album of your choice.  The web application ensures that the generated image is sized in a way that fits the Hub screen.
+
+<img src="src/assets/hubcards_edit.png" width="800px"></img>
 
 Hubcards runs on the following technologies:
 
