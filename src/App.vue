@@ -1,31 +1,59 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="vueApp">
+    <navigation-bar></navigation-bar>
+    <section class="viewBox">
+      <router-view/>
+    </section>
   </div>
 </template>
 
+<script>
+  import NavigationBar from "./components/NavigationBar";
+  export default {
+    components: { NavigationBar }
+  }
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  #vueApp {
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  p {
+    margin: 1ex 0ex !important;
+  }
+
+  .viewBox {
+    padding: 20px 15px;
+  }
+
+  .viewForm {
+    margin: 10px 0px;
+    padding-left: 5px;
+  }
+
+  /* Fade transition classes for the "Loading..." message */
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+
+  .router-link-active {
+    border-bottom: 1px solid blue !important;
+    font-size: 110%;
+    font-weight:bold;
+  }
+
+  input.colorInputBox {
+    width: 6em;
+  }
+
 </style>
